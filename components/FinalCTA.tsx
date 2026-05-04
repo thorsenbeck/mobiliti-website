@@ -7,6 +7,8 @@ export default function FinalCTA() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -14,10 +16,28 @@ export default function FinalCTA() {
     message: '',
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // In production, this would send the data to a backend
-    setSubmitted(true)
+    if (submitting) return
+    setErrorMsg(null)
+    setSubmitting(true)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) {
+        setErrorMsg(data?.error || 'Beskeden kunne ikke sendes. Prøv igen.')
+        return
+      }
+      setSubmitted(true)
+    } catch {
+      setErrorMsg('Netværksfejl. Tjek din forbindelse og prøv igen.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -220,11 +240,18 @@ export default function FinalCTA() {
                       />
                     </div>
 
+                    {errorMsg && (
+                      <div className="rounded-2xl bg-red-50 border border-red-200 text-red-800 px-4 py-3 text-sm">
+                        {errorMsg}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full bg-sage-500 hover:bg-sage-600 text-white font-semibold py-4 rounded-2xl text-base transition-all duration-300 hover:shadow-lg hover:shadow-sage-200 hover:-translate-y-0.5"
+                      disabled={submitting}
+                      className="w-full bg-sage-500 hover:bg-sage-600 disabled:bg-sage-300 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-2xl text-base transition-all duration-300 hover:shadow-lg hover:shadow-sage-200 hover:-translate-y-0.5 disabled:hover:translate-y-0 disabled:hover:shadow-none"
                     >
-                      Send — jeg vil gerne booke en konsultation
+                      {submitting ? 'Sender…' : 'Send — jeg vil gerne booke en konsultation'}
                     </button>
 
                     <p className="text-center text-xs text-sage-400">
