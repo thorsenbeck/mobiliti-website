@@ -146,43 +146,33 @@ export default function Hero() {
 
         {/* Right: Visual */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, x: 40 }}
+          initial={{ opacity: 0, scale: 0.92, x: 30 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative hidden lg:flex items-center justify-center"
         >
-          {/* Main circular image placeholder */}
-          <div className="relative w-[420px] h-[420px]">
-            {/* Outer ring */}
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-              className="absolute inset-0 rounded-full border-2 border-dashed border-sage-200"
-            />
+          <div className="relative w-full max-w-[520px]">
+            {/* Decorative outer blob (background) */}
+            <div className="absolute -inset-6 bg-sage-200/40 blob-1" />
+            <div className="absolute -inset-4 bg-cream-200/50 blob-2" />
 
-            {/* Main blob */}
-            <div className="absolute inset-8 blob-1 bg-gradient-to-br from-sage-200 to-sage-300 flex items-center justify-center overflow-hidden">
-              {/* Illustrated scene placeholder */}
-              <div className="text-center p-8">
-                <div className="w-24 h-24 rounded-full bg-sage-400/30 mx-auto mb-4 flex items-center justify-center">
-                  <svg width="48" height="48" viewBox="0 0 64 64" fill="none" className="text-sage-700">
-                    {/* Simple person silhouette */}
-                    <circle cx="32" cy="14" r="8" fill="currentColor" fillOpacity="0.6"/>
-                    <path d="M18 42c0-7.7 6.3-14 14-14s14 6.3 14 14v8H18v-8z" fill="currentColor" fillOpacity="0.5"/>
-                    <path d="M22 42l-6 10M42 42l6 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                    <path d="M26 36l-8 8M38 36l8 8" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                  </svg>
-                </div>
-                <p className="text-sage-700 font-semibold text-sm">Personlig træner</p>
-                <p className="text-sage-700 text-xs mt-1">I dit hjem</p>
-              </div>
+            {/* Main image — soft organic mask */}
+            <div className="relative blob-1 overflow-hidden shadow-2xl shadow-sage-300/40 aspect-[5/4] bg-sage-100">
+              <Image
+                src="/hero-training.png"
+                alt="Fysioterapeut træner ældre kvinde med elastik i hjemmet"
+                fill
+                sizes="(max-width: 1024px) 0px, 520px"
+                className="object-cover"
+                priority
+              />
             </div>
 
-            {/* Floating cards */}
+            {/* Floating cards over image */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-sage-100"
+              className="absolute -top-4 -left-6 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-sage-100"
             >
               <div className="w-8 h-8 rounded-full bg-sage-100 flex items-center justify-center text-sm">💪</div>
               <div>
@@ -194,7 +184,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -bottom-2 -left-6 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-sage-100"
+              className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-sage-100"
             >
               <div className="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center text-sm">🛡️</div>
               <div>
@@ -206,12 +196,12 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-              className="absolute top-1/2 -right-10 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-sage-100"
+              className="absolute top-1/2 -translate-y-1/2 -right-12 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-sage-100"
             >
               <div className="w-8 h-8 rounded-full bg-earth-100 flex items-center justify-center text-sm">❤️</div>
               <div>
                 <p className="text-xs font-semibold text-sage-900">Til pårørende</p>
-                <p className="text-xs text-sage-500">Tryg træning til mor & far</p>
+                <p className="text-xs text-sage-500">Tryghed for mor & far</p>
               </div>
             </motion.div>
           </div>
