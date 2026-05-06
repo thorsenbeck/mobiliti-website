@@ -33,7 +33,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-[5fr_6fr] gap-16 items-center">
         {/* Left: Text Content */}
         <div className="text-center lg:text-left">
           {/* Logo */}
@@ -151,20 +151,20 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative hidden lg:flex items-center justify-center"
         >
-          <div className="relative w-full max-w-[600px]">
+          <div className="relative w-full max-w-[680px]">
             {/* Decorative outer shapes (background) */}
-            <div className="absolute -inset-6 bg-sage-200/40 blob-1" />
-            <div className="absolute -inset-4 bg-cream-200/50 blob-2" />
+            <div className="absolute -inset-8 bg-sage-200/40 blob-1" />
+            <div className="absolute -inset-5 bg-cream-200/50 blob-2" />
 
-            {/* Main image — keep source aspect ratio (16:9), soft rounded shape */}
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-sage-300/40 aspect-[16/9] bg-sage-100">
+            {/* Main image — organic oval/blob shape, full quality */}
+            <div className="relative blob-1 overflow-hidden shadow-2xl shadow-sage-300/40 aspect-[6/5] bg-sage-100">
               <Image
                 src="/hero-training.png"
                 alt="Fysioterapeut træner ældre kvinde med elastik i hjemmet"
                 fill
-                sizes="(max-width: 1024px) 0px, 600px"
-                quality={95}
-                className="object-cover"
+                sizes="(max-width: 1024px) 0px, 680px"
+                className="object-cover object-center"
+                unoptimized
                 priority
               />
             </div>
