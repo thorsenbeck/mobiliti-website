@@ -117,22 +117,22 @@ export default function FinalCTA() {
             {/* Contact alternatives */}
             <div className="flex flex-col gap-3">
               <p className="text-sage-300 text-sm font-semibold">Eller kontakt os direkte:</p>
-              <a href="tel:+4512345678" className="flex items-center gap-3 text-sage-100 hover:text-white transition-colors group">
+              <a href="tel:+4561467657" className="flex items-center gap-3 text-sage-100 hover:text-white transition-colors group">
                 <div className="w-8 h-8 rounded-full bg-sage-600/60 flex items-center justify-center group-hover:bg-sage-500 transition-colors">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.99 14.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.92 3.8h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 11.5a16 16 0 006.29 6.29l1.07-1.07a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                 </div>
-                <span>+45 12 34 56 78</span>
+                <span>+45 61 46 76 57</span>
               </a>
-              <a href="mailto:hej@mobiliti.dk" className="flex items-center gap-3 text-sage-100 hover:text-white transition-colors group">
+              <a href="mailto:kontakt@mobiliti.dk" className="flex items-center gap-3 text-sage-100 hover:text-white transition-colors group">
                 <div className="w-8 h-8 rounded-full bg-sage-600/60 flex items-center justify-center group-hover:bg-sage-500 transition-colors">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
                 </div>
-                <span>hej@mobiliti.dk</span>
+                <span>kontakt@mobiliti.dk</span>
               </a>
             </div>
           </motion.div>

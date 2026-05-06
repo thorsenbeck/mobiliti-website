@@ -7,12 +7,22 @@ const concerns = [
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+      </svg>
+    ),
+    headline: 'Genoptræningen sluttede for tidligt',
+    text: 'Efter en operation, indlæggelse eller sygdom slutter den offentlige genoptræning ofte før kroppen er klar. Resultatet er tilbageskridt — og en lang vej tilbage til den hverdag, du kendte.',
+    color: 'bg-amber-50 text-amber-500 border-amber-100',
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
         <path d="M12 8v4M12 16h.01" />
       </svg>
     ),
-    headline: 'Frygten for et fald',
-    text: 'Et fald kan ændre alt på sekunder. Du bekymrer dig konstant — hvad sker der, hvis din mor eller far falder, mens de er alene hjemme?',
+    headline: 'Frygten for at falde holder dig tilbage',
+    text: 'Hver tredje over 65 år falder mindst én gang om året. Fald er den hyppigste årsag til indlæggelse hos ældre — men også den mest forebyggelige med korrekt styrke- og balancetræning.',
     color: 'bg-red-50 text-red-400 border-red-100',
   },
   {
@@ -22,29 +32,18 @@ const concerns = [
         <polyline points="9,22 9,12 15,12 15,22" />
       </svg>
     ),
-    headline: 'Tab af selvstændighed',
-    text: 'At se sin forælder kæmpe med daglige opgaver — at rejse sig, gå på trapper, tage bad — er hjerteskærende. Ingen ønsker at miste deres værdighed.',
-    color: 'bg-amber-50 text-amber-500 border-amber-100',
-  },
-  {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12,6 12,12 16,14" />
-      </svg>
-    ),
-    headline: 'Bekymringen nager døgnet rundt',
-    text: 'Du bor måske langt væk. Du kan ikke altid være der. Den tanke — "hvad sker der, hvis..." — forfølger dig hele dagen og om natten.',
+    headline: 'Fitnesscentret er ikke for dig',
+    text: 'Standard træningsmiljøer er ikke designet til kroppe i bedring eller til ældre, der gerne vil træne forebyggende. Du fortjener træning der møder dig hvor du er — fagligt og personligt.',
     color: 'bg-blue-50 text-blue-400 border-blue-100',
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.99 14.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.92 3.8h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 11.5a16 16 0 006.29 6.29l1.07-1.07a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
       </svg>
     ),
-    headline: 'Svært at finde den rigtige hjælp',
-    text: 'Fitnesscenter er for skræmmende. Fysioterapi slutter for tidligt. Personlige trænere forstår ikke ældre kroppe. Hvad er egentlig det rigtige valg?',
+    headline: 'Bekymringen for en pårørende',
+    text: 'Måske bor du langt fra din mor eller far. Du ser dem blive svagere — men hvor finder du den faglige hjælp, der både tager hånd om dem og giver dig ro i sindet?',
     color: 'bg-purple-50 text-purple-400 border-purple-100',
   },
 ]
@@ -69,19 +68,20 @@ export default function Problem() {
         >
           <div className="inline-flex items-center gap-2 bg-red-50 text-red-500 text-sm font-semibold px-4 py-2 rounded-full mb-6 border border-red-100">
             <span className="w-2 h-2 rounded-full bg-red-400" />
-            Du er ikke alene med disse tanker
+            Måske kan du genkende det her
           </div>
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-sage-900 mb-6 leading-tight"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
-            Bekymringen for din forælder{' '}
-            <em className="text-sage-500 not-italic">er reel</em>
+            Træning bør møde dig{' '}
+            <em className="text-sage-500 not-italic">hvor du er</em>
           </h2>
           <p className="text-lg text-sage-700 leading-relaxed">
-            Aldring sker gradvist — og pludselig er det ikke længere bare "far er lidt langsom".
-            Det er fald, isolation, tab af det liv han kendte. Disse bekymringer bærer tusindvis af
-            voksne børn med sig hver dag.
+            Måske er du i bedring efter en operation. Måske vil du forebygge fald og holde
+            kroppen stærk i hverdagen. Eller måske bekymrer du dig for en forælder, der trænger
+            til mere end de offentlige tilbud kan give. Vi har mødt dem alle — og lavet et
+            tilbud, der passer.
           </p>
         </motion.div>
 
@@ -118,7 +118,8 @@ export default function Problem() {
           <div className="inline-block bg-sage-50 border border-sage-200 rounded-3xl px-8 py-6 max-w-2xl">
             <p className="text-sage-700 text-lg leading-relaxed">
               <span className="font-bold text-sage-900">Men det behøver ikke at være sådan.</span>{' '}
-              Der er en vej til at give din forælder — og dig selv — ro i sindet.
+              Der findes en vej til stærkere krop, mere tryghed og bedre hverdag — og den
+              starter hjemme hos dig.
             </p>
           </div>
         </motion.div>

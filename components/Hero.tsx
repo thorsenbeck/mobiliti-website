@@ -72,17 +72,16 @@ export default function Hero() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-sage-900 leading-tight mb-6 text-balance"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
-            Giv din mor eller far{' '}
+            Genoptræning og forebyggelse —{' '}
             <span className="relative">
-              <span className="text-sage-600">friheden</span>
+              <span className="text-sage-600">hjemme hos dig</span>
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="absolute bottom-1 left-0 right-0 h-1 bg-sage-200 rounded-full origin-left"
               />
-            </span>{' '}
-            til at leve livet fuldt ud
+            </span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -92,9 +91,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-sage-700 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0"
           >
-            Professionel, skræddersyet træning i hjemmet — baseret på fysioterapi-viden.
-            Vi hjælper ældre med at bevare mobilitet, styrke og selvstændighed.
-            Trygt, værdigt og effektivt.
+            Hvad enten du er hjemme efter en operation, ønsker forebyggende styrke- og
+            balancetræning, eller leder efter tryg træning til en pårørende — så kommer vi
+            hjem til dig. Skræddersyet, fagligt funderet og helt på dine præmisser.
           </motion.p>
 
           {/* CTAs */}
@@ -132,9 +131,9 @@ export default function Hero() {
             className="flex flex-wrap gap-6 justify-center lg:justify-start mt-12"
           >
             {[
-              { icon: '🏥', label: 'Fysioterapi-uddannet' },
-              { icon: '🏠', label: 'I dit eget hjem' },
-              { icon: '✨', label: 'Gratis første konsultation' },
+              { icon: '🏥', label: 'Fysioterapi-fagligt funderet' },
+              { icon: '🏠', label: 'Træning i dit eget hjem' },
+              { icon: '✨', label: 'Gratis første samtale' },
               { icon: '📍', label: 'København & omegn' },
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-2 text-sm text-sage-700">
@@ -187,8 +186,8 @@ export default function Hero() {
             >
               <div className="w-8 h-8 rounded-full bg-sage-100 flex items-center justify-center text-sm">💪</div>
               <div>
-                <p className="text-xs font-semibold text-sage-900">Styrke & balance</p>
-                <p className="text-xs text-sage-500">Tilpasset program</p>
+                <p className="text-xs font-semibold text-sage-900">Genoptræning</p>
+                <p className="text-xs text-sage-500">Efter operation eller sygdom</p>
               </div>
             </motion.div>
 
@@ -199,8 +198,8 @@ export default function Hero() {
             >
               <div className="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center text-sm">🛡️</div>
               <div>
-                <p className="text-xs font-semibold text-sage-900">Faldforebyggelse</p>
-                <p className="text-xs text-sage-500">Evidensbaseret</p>
+                <p className="text-xs font-semibold text-sage-900">Forebyggende træning</p>
+                <p className="text-xs text-sage-500">Styrke & balance</p>
               </div>
             </motion.div>
 
@@ -211,8 +210,8 @@ export default function Hero() {
             >
               <div className="w-8 h-8 rounded-full bg-earth-100 flex items-center justify-center text-sm">❤️</div>
               <div>
-                <p className="text-xs font-semibold text-sage-900">98% tilfredshed</p>
-                <p className="text-xs text-sage-500">Hos klienter</p>
+                <p className="text-xs font-semibold text-sage-900">Til pårørende</p>
+                <p className="text-xs text-sage-500">Tryg træning til mor & far</p>
               </div>
             </motion.div>
           </div>

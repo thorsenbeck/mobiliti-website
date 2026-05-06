@@ -12,7 +12,7 @@ const benefits = [
       </svg>
     ),
     title: 'I trygge, kendte omgivelser',
-    description: 'Træning sker i jeres eget hjem — ingen farlige ture til fitnesscentret, ingen fremmed environment. Din forælder er tryg og afslappet.',
+    description: 'Træning foregår hjemme hos dig — ingen besværlige ture, ingen fremmede miljøer. Du er tryg, afslappet og kan fokusere helt på din egen krop.',
   },
   {
     icon: (
@@ -20,8 +20,8 @@ const benefits = [
         <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
       </svg>
     ),
-    title: 'Fysioterapi-baseret tilgang',
-    description: 'Vores metoder er baseret på fysioterapi-viden. Hvert program er designet til at styrke, ikke belaste — tilpasset din forælders præcise behov og begrænsninger.',
+    title: 'Fysioterapi-fagligt funderet',
+    description: 'Alle programmer udvikles og superviseres af autoriserede fysioterapeuter. Vi træner kroppen klogt — for at styrke, ikke belaste — også efter operation eller skade.',
   },
   {
     icon: (
@@ -30,8 +30,8 @@ const benefits = [
         <path d="M20 21a8 8 0 10-16 0" />
       </svg>
     ),
-    title: '100% personligt program',
-    description: 'Ingen standardprogrammer. Vi starter med en grundig vurdering og bygger et program specifikt til din forælder — med mål der giver mening for dem.',
+    title: 'Skræddersyet til dig',
+    description: 'Ingen standardprogrammer. Vi starter med en grundig faglig vurdering af din funktion, dine mål og evt. begrænsninger — og bygger et program kun til dig.',
   },
   {
     icon: (
@@ -40,7 +40,7 @@ const benefits = [
       </svg>
     ),
     title: 'Målbar fremgang',
-    description: 'Vi følger fremgangen løbende. Du og din forælder kan se den konkrete forbedring i styrke, balance og hverdagsfunktion uge for uge.',
+    description: 'Vi bruger validerede tests fra Sundhedsstyrelsens anbefalinger til at måle styrke, balance og funktion — så du kan se konkrete fremskridt uge for uge.',
   },
   {
     icon: (
@@ -49,8 +49,8 @@ const benefits = [
         <path d="M9 12l2 2 4-4" />
       </svg>
     ),
-    title: 'Faldforebyggelse som prioritet',
-    description: 'Fald er den største trussel mod ældres selvstændighed. Vores programmer inkluderer altid balancetræning og faldforebyggelse som kerneelementet.',
+    title: 'Genoptræning og forebyggelse',
+    description: 'Hvad enten du er i bedring efter operation, ønsker at forebygge fald, eller vil holde kroppen stærk i hverdagen — møder vi dig præcis dér, hvor behovet er.',
   },
   {
     icon: (
@@ -62,7 +62,7 @@ const benefits = [
       </svg>
     ),
     title: 'Værdighed og glæde',
-    description: 'Vi møder din forælder, hvor de er — med respekt, humor og tålmodighed. Træning skal være noget at se frem til, ikke noget man frygter.',
+    description: 'Vi møder dig — eller din pårørende — med respekt, humor og tålmodighed. Træning skal være noget at se frem til, ikke noget at frygte.',
   },
 ]
 
@@ -95,12 +95,13 @@ export default function Solution() {
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
             Professionel træning —{' '}
-            <span className="text-sage-500">i hjemmet, på din forælders præmisser</span>
+            <span className="text-sage-500">i hjemmet, på dine præmisser</span>
           </h2>
           <p className="text-lg text-sage-700 leading-relaxed">
-            Mobiliti kombinerer fysioterapi-viden med personlig træning og leverer det direkte i
-            dit forælders hjem. Resultatet: Mere styrke, bedre balance, færre bekymringer —
-            og et liv der leves fuldt ud.
+            Mobiliti kombinerer fysioterapi-faglighed med personlig træning og leverer det
+            direkte hjem til dig. Hvad enten målet er hurtigere bedring efter operation,
+            forebyggelse af fald, eller vedligehold af styrke og bevægelighed — møder vi dig
+            der hvor du er.
           </p>
         </motion.div>
 
@@ -130,12 +131,15 @@ export default function Solution() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mt-20 bg-white rounded-4xl border border-sage-100 p-8 md:p-10"
         >
+          <p className="text-center text-sage-500 text-sm font-semibold uppercase tracking-wider mb-6">
+            Hvorfor træning hjemme er vigtigt
+          </p>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { number: '500+', label: 'Tilfredse klienter', sub: 'og deres familier' },
-              { number: '98%', label: 'Tilfredshedsscore', sub: 'efter 3 måneder' },
-              { number: '73%', label: 'Færre fald', sub: 'hos aktive klienter' },
-              { number: '5★', label: 'Gennemsnitlig bedømmelse', sub: 'på tværs af platforme' },
+              { number: '1 ud af 3', label: 'over 65 år falder', sub: 'mindst én gang årligt' },
+              { number: 'Op til 30%', label: 'tab af muskelmasse', sub: 'efter blot 2 ugers immobilitet' },
+              { number: '40%', label: 'lavere faldrisiko', sub: 'med superviseret styrke- og balancetræning' },
+              { number: '100%', label: 'fysioterapi-faglig', sub: 'supervision af autoriseret terapeut' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -145,7 +149,7 @@ export default function Solution() {
                 className="flex flex-col items-center"
               >
                 <span
-                  className="text-4xl font-bold text-sage-600 mb-1"
+                  className="text-3xl md:text-4xl font-bold text-sage-600 mb-1"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
                   {stat.number}
@@ -155,6 +159,9 @@ export default function Solution() {
               </motion.div>
             ))}
           </div>
+          <p className="text-center text-xs text-sage-400 mt-8">
+            Kilder: Sundhedsstyrelsen, Cochrane Review (Sherrington et al., 2019)
+          </p>
         </motion.div>
       </div>
     </section>

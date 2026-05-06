@@ -48,28 +48,28 @@ export default function Footer() {
             </a>
 
             <p className="text-sage-400 leading-relaxed mb-6 max-w-xs text-sm">
-              Fysioterapi-baseret personlig træning i hjemmet. Vi hjælper ældre med at bevare
-              mobilitet, styrke og selvstændighed — trygt, værdigt og effektivt.
+              Fysioterapi-baseret hjemmetræning til genoptræning, forebyggelse og vedligehold —
+              trygt, fagligt og hjemme hos dig.
             </p>
 
             {/* Contact info */}
             <div className="space-y-2.5">
-              <a href="tel:+4512345678" className="flex items-center gap-2.5 text-sm text-sage-400 hover:text-sage-200 transition-colors group">
+              <a href="tel:+4561467657" className="flex items-center gap-2.5 text-sm text-sage-400 hover:text-sage-200 transition-colors group">
                 <div className="w-7 h-7 rounded-full bg-sage-700 flex items-center justify-center group-hover:bg-sage-600 transition-colors">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.99 14.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.92 3.8h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 11.5a16 16 0 006.29 6.29l1.07-1.07a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                 </div>
-                +45 12 34 56 78
+                +45 61 46 76 57
               </a>
-              <a href="mailto:hej@mobiliti.dk" className="flex items-center gap-2.5 text-sm text-sage-400 hover:text-sage-200 transition-colors group">
+              <a href="mailto:kontakt@mobiliti.dk" className="flex items-center gap-2.5 text-sm text-sage-400 hover:text-sage-200 transition-colors group">
                 <div className="w-7 h-7 rounded-full bg-sage-700 flex items-center justify-center group-hover:bg-sage-600 transition-colors">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
                 </div>
-                hej@mobiliti.dk
+                kontakt@mobiliti.dk
               </a>
               <div className="flex items-center gap-2.5 text-sm text-sage-400">
                 <div className="w-7 h-7 rounded-full bg-sage-700 flex items-center justify-center">
@@ -104,7 +104,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Kom i gang</h4>
             <p className="text-sage-400 text-sm leading-relaxed mb-5">
-              Book en gratis, uforpligtende konsultation og hør, hvad vi kan gøre for din familie.
+              Book en gratis, uforpligtende konsultation og hør hvad vi kan gøre for dig eller din pårørende.
             </p>
             <a
               href="#contact"
@@ -140,7 +140,7 @@ export default function Footer() {
           {/* Tagline */}
           <div className="mt-6 text-center">
             <p className="text-sage-600 text-xs italic">
-              "At hjælpe ældre med at leve livet fuldt ud — det er vores kald."
+              "Bevægelse er ikke en luksus — det er en rettighed."
             </p>
           </div>
         </div>

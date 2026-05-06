@@ -87,8 +87,8 @@ export default function Pricing() {
           </h2>
 
           <p className="text-lg text-sage-700 max-w-xl mx-auto leading-relaxed">
-            Ingen skjulte gebyrer. Ingen binding. Bare professionel træning, der gør en reel forskel
-            — i dit eget hjem.
+            Ingen skjulte gebyrer. Ingen binding. Bare professionel hjemmetræning til
+            genoptræning, forebyggelse eller vedligehold — på dine præmisser.
           </p>
         </motion.div>
 
