@@ -151,18 +151,19 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative hidden lg:flex items-center justify-center"
         >
-          <div className="relative w-full max-w-[520px]">
-            {/* Decorative outer blob (background) */}
+          <div className="relative w-full max-w-[600px]">
+            {/* Decorative outer shapes (background) */}
             <div className="absolute -inset-6 bg-sage-200/40 blob-1" />
             <div className="absolute -inset-4 bg-cream-200/50 blob-2" />
 
-            {/* Main image — soft organic mask */}
-            <div className="relative blob-1 overflow-hidden shadow-2xl shadow-sage-300/40 aspect-[5/4] bg-sage-100">
+            {/* Main image — keep source aspect ratio (16:9), soft rounded shape */}
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-sage-300/40 aspect-[16/9] bg-sage-100">
               <Image
                 src="/hero-training.png"
                 alt="Fysioterapeut træner ældre kvinde med elastik i hjemmet"
                 fill
-                sizes="(max-width: 1024px) 0px, 520px"
+                sizes="(max-width: 1024px) 0px, 600px"
+                quality={95}
                 className="object-cover"
                 priority
               />
