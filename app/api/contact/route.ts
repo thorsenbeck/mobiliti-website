@@ -2,11 +2,7 @@ import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
 export const runtime = 'nodejs'
-
-const resend = new Resend(process.env.RESEND_API_KEY)
-
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'hej@mobiliti.dk'
-const FROM_ADDRESS = process.env.RESEND_FROM || 'Mobiliti <onboarding@resend.dev>'
+export const dynamic = 'force-dynamic'
 
 function escapeHtml(value: string) {
   return value
@@ -19,13 +15,18 @@ function escapeHtml(value: string) {
 
 export async function POST(request: Request) {
   try {
-    if (!process.env.RESEND_API_KEY) {
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
       console.error('Missing RESEND_API_KEY')
       return NextResponse.json(
         { error: 'Server is not configured to send mail.' },
         { status: 500 }
       )
     }
+
+    const resend = new Resend(apiKey)
+    const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'hej@mobiliti.dk'
+    const FROM_ADDRESS = process.env.RESEND_FROM || 'Mobiliti <onboarding@resend.dev>'
 
     const body = await request.json().catch(() => null)
     if (!body) {
