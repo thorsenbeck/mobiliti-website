@@ -17,9 +17,10 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { label: 'Om os', href: '#about' },
-    { label: 'Sådan virker det', href: '#how-it-works' },
-    { label: 'Priser', href: '#pricing' },
+    { label: 'Om os', href: '/#about' },
+    { label: 'Sådan virker det', href: '/#how-it-works' },
+    { label: 'Priser', href: '/#pricing' },
+    { label: 'Projekt', href: '/projekt' },
   ]
 
   return (
@@ -36,7 +37,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center group">
+          <a href="/" className="flex items-center group">
             <Image
               src="/mobiliti_logo.png"
               alt="Mobiliti"
@@ -63,7 +64,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 bg-sage-500 hover:bg-sage-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-sage-200 hover:-translate-y-0.5"
             >
               Book gratis konsultation
@@ -116,7 +117,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 inline-flex items-center justify-center bg-sage-500 hover:bg-sage-600 text-white font-semibold px-5 py-3 rounded-full transition-all duration-300"
               >
