@@ -6,10 +6,9 @@ import { useRef } from 'react'
 const steps = [
   {
     number: '01',
-    title: 'Gratis intake-samtale',
-    subtitle: 'Superviseret af uddannet fysioterapeut',
-    description: 'Vi starter med en grundig intake-samtale — enten hjemme eller via videocall — med en uddannet fysioterapeut. Her kortlægger vi mål, behov og eventuelle begrænsninger, og lægger et individuelt program klar.',
-    details: ['Gratis og uforpligtende', 'Gennemføres af uddannet fysioterapeut', 'Individuelt program godkendes og dokumenteres', 'Pårørende er velkomne'],
+    title: 'Gratis samtale',
+    description: 'Vi mødes hjemme hos dig eller på video. Vi taler om dine mål — gratis og uforpligtende.',
+    details: ['Gratis og uforpligtende', 'Pårørende er velkomne'],
     color: 'from-sage-400 to-sage-500',
     bgLight: 'bg-sage-50',
     accentColor: 'text-sage-700',
@@ -17,10 +16,9 @@ const steps = [
   },
   {
     number: '02',
-    title: 'Terapeut-matching',
-    subtitle: 'Fast terapeut fra første besøg',
-    description: 'Vi matcher dig — eller din pårørende — med en fast fysioterapeutstuderende fra vores hold. Alle er på 3. semester eller derover og oplært i Mobiliti-metoden. Samme ansigt fra uge til uge giver tryghed og kontinuitet.',
-    details: ['Fysioterapeutstuderende under supervision', 'Onboardet og kvalitetstjekket af Mobiliti', 'Tavshedspligt og GDPR-sikret', 'Altid samme terapeut'],
+    title: 'Din faste træner',
+    description: 'Du får én fast træner der kender dig. Samme ansigt hver gang — det giver tryghed.',
+    details: ['Samme træner hver gang', 'Tavshedspligt og GDPR-sikret'],
     color: 'from-earth-400 to-earth-500',
     bgLight: 'bg-earth-50',
     accentColor: 'text-earth-600',
@@ -28,10 +26,9 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Træning starter — og fortsætter',
-    subtitle: '45 min · i hjemmet · løbende justeret',
-    description: 'Terapeuten kommer hjem til dig 1-3 gange ugentligt. Hver session er 45 minutter med aktiv træning, vejledning og statusopdatering. Programmet evalueres månedligt af supervisor-fysioterapeuten — og justeres løbende efter dine fremskridt.',
-    details: ['45 min pr. session — i eget hjem', 'Digital journal efter hvert besøg', 'Månedlig evaluering og programjustering', 'Ingen binding — opsigelse med 14 dages varsel'],
+    title: 'Vi kommer hjem til dig',
+    description: '45 minutters træning hos dig, 1–3 gange om ugen. Programmet justeres så du hele tiden gør fremskridt.',
+    details: ['45 min pr. besøg', 'Ingen binding — 14 dages opsigelse'],
     color: 'from-warm-400 to-warm-500',
     bgLight: 'bg-warm-50',
     accentColor: 'text-warm-600',
@@ -70,8 +67,7 @@ export default function HowItWorks() {
             Tre enkle trin til et bedre liv
           </h2>
           <p className="text-lg text-sage-700 leading-relaxed">
-            Vi gør det nemt at komme i gang. Ingen komplicerede processer, ingen skræmmende
-            udstyr — bare omsorgsfuld, professionel hjælp der virker.
+            Sådan kommer du i gang — nemt og uden forpligtelser.
           </p>
         </motion.div>
 
@@ -111,8 +107,7 @@ export default function HowItWorks() {
                   />
                 </div>
 
-                <h3 className="text-xl font-bold text-sage-900 mb-1">{step.title}</h3>
-                <p className={`text-sm font-semibold ${step.accentColor} mb-4`}>{step.subtitle}</p>
+                <h3 className="text-xl font-bold text-sage-900 mb-3">{step.title}</h3>
                 <p className="text-sage-700 leading-relaxed mb-6 text-sm">{step.description}</p>
 
                 {/* Detail list */}

@@ -11,8 +11,8 @@ const benefits = [
         <polyline points="9,22 9,12 15,12 15,22" />
       </svg>
     ),
-    title: 'I trygge, kendte omgivelser',
-    description: 'Træning foregår hjemme hos dig — ingen besværlige ture, ingen fremmede miljøer. Du er tryg, afslappet og kan fokusere helt på din egen krop.',
+    title: 'Hjemme hos dig',
+    description: 'Ingen transport, ingen fremmede miljøer. Du træner i kendte og trygge omgivelser.',
   },
   {
     icon: (
@@ -20,8 +20,8 @@ const benefits = [
         <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
       </svg>
     ),
-    title: 'Fysioterapi-fagligt funderet',
-    description: 'Alle programmer udvikles og superviseres af autoriserede fysioterapeuter. Vi træner kroppen klogt — for at styrke, ikke belaste — også efter operation eller skade.',
+    title: 'Trygt og fagligt',
+    description: 'Alle programmer er udviklet og superviseret af en autoriseret fysioterapeut.',
   },
   {
     icon: (
@@ -30,8 +30,8 @@ const benefits = [
         <path d="M20 21a8 8 0 10-16 0" />
       </svg>
     ),
-    title: 'Skræddersyet til dig',
-    description: 'Ingen standardprogrammer. Vi starter med en grundig faglig vurdering af din funktion, dine mål og evt. begrænsninger — og bygger et program kun til dig.',
+    title: 'Lavet til dig',
+    description: 'Vi bygger et program der passer til din krop, dine mål og dit tempo — ikke til alle andres.',
   },
   {
     icon: (
@@ -39,30 +39,8 @@ const benefits = [
         <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" />
       </svg>
     ),
-    title: 'Målbar fremgang',
-    description: 'Vi bruger validerede tests fra Sundhedsstyrelsens anbefalinger til at måle styrke, balance og funktion — så du kan se konkrete fremskridt uge for uge.',
-  },
-  {
-    icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        <path d="M9 12l2 2 4-4" />
-      </svg>
-    ),
-    title: 'Genoptræning og forebyggelse',
-    description: 'Hvad enten du er i bedring efter operation, ønsker at forebygge fald, eller vil holde kroppen stærk i hverdagen — møder vi dig præcis dér, hvor behovet er.',
-  },
-  {
-    icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-        <line x1="9" y1="9" x2="9.01" y2="9" />
-        <line x1="15" y1="9" x2="15.01" y2="9" />
-      </svg>
-    ),
-    title: 'Værdighed og glæde',
-    description: 'Vi møder dig — eller din pårørende — med respekt, humor og tålmodighed. Træning skal være noget at se frem til, ikke noget at frygte.',
+    title: 'Du kan mærke fremgang',
+    description: 'Vi måler regelmæssigt, så du selv kan se hvor du bliver stærkere og mere stabil.',
   },
 ]
 
@@ -88,25 +66,22 @@ export default function Solution() {
         >
           <div className="inline-flex items-center gap-2 bg-sage-100 text-sage-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 border border-sage-200">
             <span className="w-2 h-2 rounded-full bg-sage-500" />
-            Løsningen du har ledt efter
+            Sådan gør vi det
           </div>
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-sage-900 mb-6 leading-tight"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
-            Professionel træning —{' '}
-            <span className="text-sage-500">i hjemmet, på dine præmisser</span>
+            Personlig træning —{' '}
+            <span className="text-sage-500">på dine præmisser</span>
           </h2>
           <p className="text-lg text-sage-700 leading-relaxed">
-            Mobiliti kombinerer fysioterapi-faglighed med personlig træning og leverer det
-            direkte hjem til dig. Hvad enten målet er hurtigere bedring efter operation,
-            forebyggelse af fald, eller vedligehold af styrke og bevægelighed — møder vi dig
-            der hvor du er.
+            Vi kombinerer faglig viden med personlig omsorg — og kommer direkte hjem til dig.
           </p>
         </motion.div>
 
         {/* Benefits grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.title}
@@ -123,46 +98,6 @@ export default function Solution() {
             </motion.div>
           ))}
         </div>
-
-        {/* Visual proof strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-20 bg-white rounded-4xl border border-sage-100 p-8 md:p-10"
-        >
-          <p className="text-center text-sage-500 text-sm font-semibold uppercase tracking-wider mb-6">
-            Hvorfor træning hjemme er vigtigt
-          </p>
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: '1 ud af 3', label: 'over 65 år falder', sub: 'mindst én gang årligt' },
-              { number: 'Op til 30%', label: 'tab af muskelmasse', sub: 'efter blot 2 ugers immobilitet' },
-              { number: '40%', label: 'lavere faldrisiko', sub: 'med superviseret styrke- og balancetræning' },
-              { number: '100%', label: 'fysioterapi-faglig', sub: 'supervision af autoriseret terapeut' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.6 + 0.1 * index }}
-                className="flex flex-col items-center"
-              >
-                <span
-                  className="text-3xl md:text-4xl font-bold text-sage-600 mb-1"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                >
-                  {stat.number}
-                </span>
-                <span className="text-sm font-semibold text-sage-900">{stat.label}</span>
-                <span className="text-xs text-sage-500 mt-0.5">{stat.sub}</span>
-              </motion.div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-sage-400 mt-8">
-            Kilder: Sundhedsstyrelsen, Cochrane Review (Sherrington et al., 2019)
-          </p>
-        </motion.div>
       </div>
     </section>
   )

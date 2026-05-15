@@ -91,9 +91,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-sage-700 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0"
           >
-            Hvad enten du er hjemme efter en operation, ønsker forebyggende styrke- og
-            balancetræning, eller leder efter tryg træning til en pårørende — så kommer vi
-            hjem til dig. Skræddersyet, fagligt funderet og helt på dine præmisser.
+            Genoptræning efter operation. Forebyggende træning. Eller bare en stærkere,
+            tryggere hverdag — vi kommer hjem til dig.
           </motion.p>
 
           {/* CTAs */}
@@ -131,8 +130,7 @@ export default function Hero() {
             className="flex flex-wrap gap-6 justify-center lg:justify-start mt-12"
           >
             {[
-              { icon: '🏥', label: 'Fysioterapi-fagligt funderet' },
-              { icon: '🏠', label: 'Træning i dit eget hjem' },
+              { icon: '🏠', label: 'Hjemme hos dig' },
               { icon: '✨', label: 'Gratis første samtale' },
               { icon: '📍', label: 'København & omegn' },
             ].map((badge) => (

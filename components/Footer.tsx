@@ -5,10 +5,11 @@ import Image from 'next/image'
 
 const footerLinks = {
   navigation: [
-    { label: 'Om os', href: '#about' },
-    { label: 'Sådan virker det', href: '#how-it-works' },
-    { label: 'Priser', href: '#pricing' },
-    { label: 'Book konsultation', href: '#contact' },
+    { label: 'Om os', href: '/#about' },
+    { label: 'Sådan virker det', href: '/#how-it-works' },
+    { label: 'Priser', href: '/#pricing' },
+    { label: 'Projekt', href: '/projekt' },
+    { label: 'Book konsultation', href: '/#contact' },
   ],
   legal: [
     { label: 'Privatlivspolitik', href: '#' },
@@ -37,7 +38,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             {/* Logo */}
-            <a href="#" className="inline-block mb-5 group">
+            <a href="/" className="inline-block mb-5 group">
               <Image
                 src="/mobiliti_logo.png"
                 alt="Mobiliti"
@@ -48,8 +49,7 @@ export default function Footer() {
             </a>
 
             <p className="text-sage-400 leading-relaxed mb-6 max-w-xs text-sm">
-              Fysioterapi-baseret hjemmetræning til genoptræning, forebyggelse og vedligehold —
-              trygt, fagligt og hjemme hos dig.
+              Personlig træning — hjemme hos dig.
             </p>
 
             {/* Contact info */}
@@ -104,10 +104,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Kom i gang</h4>
             <p className="text-sage-400 text-sm leading-relaxed mb-5">
-              Book en gratis, uforpligtende konsultation og hør hvad vi kan gøre for dig eller din pårørende.
+              Book en gratis samtale — uden forpligtelser.
             </p>
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 bg-sage-500 hover:bg-sage-400 text-white text-sm font-semibold px-5 py-3 rounded-full transition-all duration-300 hover:-translate-y-0.5"
             >
               Book gratis konsultation

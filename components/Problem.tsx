@@ -11,7 +11,7 @@ const concerns = [
       </svg>
     ),
     headline: 'Genoptræningen sluttede for tidligt',
-    text: 'Efter en operation, indlæggelse eller sygdom slutter den offentlige genoptræning ofte før kroppen er klar. Resultatet er tilbageskridt — og en lang vej tilbage til den hverdag, du kendte.',
+    text: 'Den offentlige genoptræning slutter ofte før kroppen er klar — og du står tilbage uden den næste hjælp.',
     color: 'bg-amber-50 text-amber-500 border-amber-100',
   },
   {
@@ -22,7 +22,7 @@ const concerns = [
       </svg>
     ),
     headline: 'Frygten for at falde holder dig tilbage',
-    text: 'Hver tredje over 65 år falder mindst én gang om året. Fald er den hyppigste årsag til indlæggelse hos ældre — men også den mest forebyggelige med korrekt styrke- og balancetræning.',
+    text: 'Hver tredje over 65 falder mindst én gang om året. Den gode nyhed: styrke og balance kan trænes — og fald kan forebygges.',
     color: 'bg-red-50 text-red-400 border-red-100',
   },
   {
@@ -33,7 +33,7 @@ const concerns = [
       </svg>
     ),
     headline: 'Fitnesscentret er ikke for dig',
-    text: 'Standard træningsmiljøer er ikke designet til kroppe i bedring eller til ældre, der gerne vil træne forebyggende. Du fortjener træning der møder dig hvor du er — fagligt og personligt.',
+    text: 'Du har ikke lyst til at træne mellem fremmede — du har brug for nogen der møder dig hvor du er.',
     color: 'bg-blue-50 text-blue-400 border-blue-100',
   },
   {
@@ -43,7 +43,7 @@ const concerns = [
       </svg>
     ),
     headline: 'Bekymringen for en pårørende',
-    text: 'Måske bor du langt fra din mor eller far. Du ser dem blive svagere — men hvor finder du den faglige hjælp, der både tager hånd om dem og giver dig ro i sindet?',
+    text: 'Du ser din mor eller far blive svagere — men du ved ikke hvor du skal finde den rette hjælp.',
     color: 'bg-purple-50 text-purple-400 border-purple-100',
   },
 ]
@@ -78,10 +78,8 @@ export default function Problem() {
             <em className="text-sage-500 not-italic">hvor du er</em>
           </h2>
           <p className="text-lg text-sage-700 leading-relaxed">
-            Måske er du i bedring efter en operation. Måske vil du forebygge fald og holde
-            kroppen stærk i hverdagen. Eller måske bekymrer du dig for en forælder, der trænger
-            til mere end de offentlige tilbud kan give. Vi har mødt dem alle — og lavet et
-            tilbud, der passer.
+            Du er i bedring efter en operation. Du vil forebygge fald. Eller du bekymrer
+            dig for en pårørende. Vi har en løsning der passer.
           </p>
         </motion.div>
 
@@ -108,21 +106,6 @@ export default function Problem() {
           ))}
         </div>
 
-        {/* Transition bridge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          className="text-center mt-16"
-        >
-          <div className="inline-block bg-sage-50 border border-sage-200 rounded-3xl px-8 py-6 max-w-2xl">
-            <p className="text-sage-700 text-lg leading-relaxed">
-              <span className="font-bold text-sage-900">Men det behøver ikke at være sådan.</span>{' '}
-              Der findes en vej til stærkere krop, mere tryghed og bedre hverdag — og den
-              starter hjemme hos dig.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

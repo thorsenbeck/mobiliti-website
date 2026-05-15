@@ -87,8 +87,7 @@ export default function Pricing() {
           </h2>
 
           <p className="text-lg text-sage-700 max-w-xl mx-auto leading-relaxed">
-            Ingen skjulte gebyrer. Ingen binding. Bare professionel hjemmetræning til
-            genoptræning, forebyggelse eller vedligehold — på dine præmisser.
+            Ingen skjulte gebyrer. Ingen binding. Vælg det der passer dig.
           </p>
         </motion.div>
 
@@ -192,7 +191,7 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center text-sage-500 text-sm mt-10"
         >
-          Alle pakker inkluderer individuelt program superviseret af uddannet fysioterapeut · Ingen binding · Opsigelse med 14 dages varsel · 📍 Pt. kun i København & omegn
+          Individuelt program · Ingen binding · 14 dages opsigelse · 📍 København & omegn
         </motion.p>
       </div>
     </section>

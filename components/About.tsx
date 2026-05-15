@@ -7,25 +7,25 @@ const pillars = [
   {
     icon: '🎯',
     title: 'Mission',
-    text: 'At gøre faglig hjemmetræning tilgængelig for alle — uanset alder, geografi eller ressourcer.',
+    text: 'Faglig træning skal være tilgængelig for alle — uanset alder eller hvor du bor.',
   },
   {
     icon: '🌟',
     title: 'Vision',
-    text: 'At blive Danmarks foretrukne leverandør af fysioterapeutisk hjemmetræning og et anerkendt karrierespring for fysioterapeutstuderende.',
+    text: 'At blive det første sted folk tænker på, når de skal træne hjemme.',
   },
   {
     icon: '❤️',
     title: 'Hvorfor Mobiliti?',
-    text: 'Vi så igen og igen, hvad der skete når ældre kom til klinikken for sent. Mobiliti opstod af ønsket om at møde folk, inden krisen rammer — direkte i det hjem, hvor livet leves.',
+    text: 'Jeg så for ofte, at folk kom for sent. Mobiliti er bygget på ønsket om at møde dig der hvor du er — hjemme.',
   },
 ]
 
 const values = [
-  { icon: '🔬', label: 'Faglighed', text: 'Alle programmer superviseres af autoriserede fysioterapeuter' },
-  { icon: '🤝', label: 'Tryghed', text: 'Borgeren møder altid den samme terapeut' },
-  { icon: '🏠', label: 'Tilgængelighed', text: 'Vi kommer til dig — ikke omvendt' },
-  { icon: '💬', label: 'Transparens', text: 'Pårørende holdes løbende informeret' },
+  { icon: '🔬', label: 'Faglighed', text: 'Superviseret af autoriseret fysioterapeut' },
+  { icon: '🤝', label: 'Tryghed', text: 'Samme træner hver gang' },
+  { icon: '🏠', label: 'Tilgængelighed', text: 'Vi kommer til dig' },
+  { icon: '💬', label: 'Åbenhed', text: 'Pårørende holdes informeret' },
 ]
 
 export default function About() {
@@ -61,8 +61,8 @@ export default function About() {
             <em className="text-sage-500 not-italic">det er en rettighed</em>
           </h2>
           <p className="text-lg text-sage-700 max-w-2xl mx-auto leading-relaxed">
-            Mobiliti er grundlagt af en uddannet fysioterapeut med én overbevisning: at alle ældre
-            fortjener professionel, tryg og tilgængelig træning — i deres eget hjem.
+            Mobiliti er grundlagt af en fysioterapeut med én overbevisning: alle fortjener
+            tryg, faglig træning — hjemme hos sig selv.
           </p>
         </motion.div>
 

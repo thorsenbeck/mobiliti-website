@@ -91,28 +91,9 @@ export default function FinalCTA() {
               <em className="text-sage-300 not-italic">i dag</em>
             </h2>
 
-            <p className="text-sage-200 text-lg leading-relaxed mb-8">
-              En gratis konsultation koster ingenting — men den kan betyde alt.
-              Vi lytter, besvarer dine spørgsmål og hjælper dig med at finde ud af,
-              om Mobiliti er det rigtige for din familie.
+            <p className="text-sage-200 text-lg leading-relaxed mb-10">
+              Skriv til os — vi vender tilbage inden for 24 timer. Ingen forpligtelse.
             </p>
-
-            {/* What to expect */}
-            <div className="space-y-4 mb-10">
-              <p className="text-sage-300 text-sm font-semibold uppercase tracking-wider">Hvad sker der, når du skriver til os?</p>
-              {[
-                { step: '1', text: 'Vi kontakter dig inden for 24 timer' },
-                { step: '2', text: 'Vi aftaler en gratis telefonsamtale (30 min)' },
-                { step: '3', text: 'Ingen forpligtelse — du bestemmer selv' },
-              ].map((item) => (
-                <div key={item.step} className="flex items-center gap-3">
-                  <div className="w-7 h-7 rounded-full bg-sage-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-                    {item.step}
-                  </div>
-                  <p className="text-sage-200">{item.text}</p>
-                </div>
-              ))}
-            </div>
 
             {/* Contact alternatives */}
             <div className="flex flex-col gap-3">
@@ -164,7 +145,6 @@ export default function FinalCTA() {
                   </h3>
                   <p className="text-sage-700">
                     Vi har modtaget din besked og vender tilbage inden for 24 timer.
-                    Glæd dig — et bedre liv for din forælder begynder her.
                   </p>
                 </motion.div>
               ) : (
@@ -235,7 +215,7 @@ export default function FinalCTA() {
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Fx. Min mor er 77 år og har svært ved balance. Vi bor 200 km fra hinanden og er bekymrede for..."
+                        placeholder="Fortæl kort om dig selv eller den person det handler om..."
                         className="w-full px-4 py-3 rounded-2xl border border-sage-200 text-sage-900 placeholder-sage-300 focus:outline-none focus:ring-2 focus:ring-sage-400 focus:border-transparent transition-all bg-sage-50/50 text-sm resize-none"
                       />
                     </div>
@@ -255,8 +235,7 @@ export default function FinalCTA() {
                     </button>
 
                     <p className="text-center text-xs text-sage-400">
-                      Ingen spam. Dine oplysninger behandles fortroligt og slettes efter 30 dage
-                      hvis vi ikke indgår et samarbejde.
+                      Ingen spam. Dine oplysninger behandles fortroligt.
                     </p>
                   </form>
                 </>
