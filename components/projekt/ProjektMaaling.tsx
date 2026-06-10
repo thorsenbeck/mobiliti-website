@@ -43,19 +43,19 @@ export default function ProjektMaaling() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 mb-12">
           {tests.map((test, i) => (
             <motion.div
               key={test.name}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.06 * i }}
-              className="bg-white rounded-3xl p-6 border border-sage-100 flex items-start gap-4"
+              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-sage-100 flex flex-col sm:flex-row items-start gap-2 sm:gap-4"
             >
-              <div className="text-3xl flex-shrink-0">{test.icon}</div>
+              <div className="text-2xl sm:text-3xl flex-shrink-0">{test.icon}</div>
               <div>
-                <h3 className="font-bold text-sage-900 text-base mb-1">{test.name}</h3>
-                <p className="text-sm text-sage-600">{test.measures}</p>
+                <h3 className="font-bold text-sage-900 text-xs sm:text-base mb-0.5 sm:mb-1 leading-snug">{test.name}</h3>
+                <p className="text-xs sm:text-sm text-sage-600">{test.measures}</p>
               </div>
             </motion.div>
           ))}

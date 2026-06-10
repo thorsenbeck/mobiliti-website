@@ -33,16 +33,16 @@ export default function ProjektForankring() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5 md:gap-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="bg-sage-50 rounded-3xl p-8 border border-sage-100"
+            className="bg-sage-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-sage-100"
           >
-            <div className="text-3xl mb-4">🏛️</div>
-            <h3 className="text-xl font-bold text-sage-900 mb-3">Kommunalt samarbejde</h3>
-            <p className="text-sage-700 leading-relaxed text-sm">
+            <div className="text-2xl sm:text-3xl mb-2 sm:mb-4">🏛️</div>
+            <h3 className="text-sm sm:text-lg md:text-xl font-bold text-sage-900 mb-2 sm:mb-3 leading-snug">Kommunalt samarbejde</h3>
+            <p className="text-xs sm:text-sm text-sage-700 leading-relaxed">
               Resultaterne kan informere kommunale beslutninger om fremtidige rehabiliteringstilbud
               og indgå som grundlag for samarbejde med kommuner om forebyggende hjemmebesøg.
             </p>
@@ -52,11 +52,11 @@ export default function ProjektForankring() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-cream-100 rounded-3xl p-8 border border-cream-200"
+            className="bg-cream-100 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-cream-200"
           >
-            <div className="text-3xl mb-4">🎓</div>
-            <h3 className="text-xl font-bold text-sage-900 mb-3">Uddannelsessamarbejde</h3>
-            <p className="text-sage-700 leading-relaxed text-sm">
+            <div className="text-2xl sm:text-3xl mb-2 sm:mb-4">🎓</div>
+            <h3 className="text-sm sm:text-lg md:text-xl font-bold text-sage-900 mb-2 sm:mb-3 leading-snug">Uddannelsessamarbejde</h3>
+            <p className="text-xs sm:text-sm text-sage-700 leading-relaxed">
               Mobiliti ønsker at etablere formaliseret samarbejde med fysioterapeutuddannelser,
               så praktikophold hos Mobiliti bliver en anerkendt del af uddannelsesforløbet.
             </p>
@@ -66,11 +66,11 @@ export default function ProjektForankring() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-3xl p-8 border border-sage-200"
+            className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-sage-200"
           >
-            <div className="text-3xl mb-4">📊</div>
-            <h3 className="text-xl font-bold text-sage-900 mb-3">Åben videndeling</h3>
-            <p className="text-sage-700 leading-relaxed text-sm">
+            <div className="text-2xl sm:text-3xl mb-2 sm:mb-4">📊</div>
+            <h3 className="text-sm sm:text-lg md:text-xl font-bold text-sage-900 mb-2 sm:mb-3 leading-snug">Åben videndeling</h3>
+            <p className="text-xs sm:text-sm text-sage-700 leading-relaxed">
               Den afsluttende projektrapport stilles frit tilgængelig, og aggregerede effekttal
               offentliggøres løbende på mobiliti.dk efter projektets afslutning.
             </p>
@@ -80,11 +80,11 @@ export default function ProjektForankring() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-sage-900 text-white rounded-3xl p-8"
+            className="bg-sage-900 text-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8"
           >
-            <div className="text-3xl mb-4">🌱</div>
-            <h3 className="text-xl font-bold mb-3">Bæredygtig drift</h3>
-            <p className="text-sage-200 leading-relaxed text-sm">
+            <div className="text-2xl sm:text-3xl mb-2 sm:mb-4">🌱</div>
+            <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 leading-snug">Bæredygtig drift</h3>
+            <p className="text-xs sm:text-sm text-sage-200 leading-relaxed">
               Den afprøvede leveringsmodel — fysioterapeutstuderende under supervision —
               skaber økonomisk grundlag for at drive Mobiliti videre uden løbende fondsstøtte
               efter pilotperioden.

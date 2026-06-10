@@ -92,16 +92,16 @@ export default function Pricing() {
         </motion.div>
 
         {/* Pricing cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 md:gap-6 lg:gap-8 items-start">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className={`relative rounded-3xl p-6 md:p-8 flex flex-col ${
+              className={`relative rounded-3xl p-5 sm:p-6 md:p-8 flex flex-col ${
                 plan.highlight
-                  ? 'bg-sage-900 text-white shadow-2xl shadow-sage-900/20 md:-mt-4 md:mb-4'
+                  ? 'col-span-2 md:col-span-1 order-first md:order-none bg-sage-900 text-white shadow-2xl shadow-sage-900/20 md:-mt-4 md:mb-4'
                   : 'bg-white border border-sage-100 shadow-lg shadow-sage-100/40'
               }`}
             >
@@ -118,7 +118,7 @@ export default function Pricing() {
               )}
 
               {/* Plan name */}
-              <p className={`text-sm font-semibold uppercase tracking-widest mb-4 ${
+              <p className={`text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 md:mb-4 ${
                 plan.highlight ? 'text-sage-300' : 'text-sage-500'
               }`}>
                 {plan.name}
@@ -127,27 +127,27 @@ export default function Pricing() {
               {/* Price */}
               <div className="mb-2">
                 <span
-                  className={`text-5xl font-bold ${plan.highlight ? 'text-white' : 'text-sage-900'}`}
+                  className={`text-3xl sm:text-4xl md:text-5xl font-bold ${plan.highlight ? 'text-white' : 'text-sage-900'}`}
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
                   {plan.price}
                 </span>
-                <span className={`text-lg font-medium ml-1 ${plan.highlight ? 'text-sage-300' : 'text-sage-500'}`}>
+                <span className={`text-sm md:text-lg font-medium ml-1 ${plan.highlight ? 'text-sage-300' : 'text-sage-500'}`}>
                   kr
                 </span>
               </div>
-              <p className={`text-sm mb-8 ${plan.highlight ? 'text-sage-400' : 'text-sage-500'}`}>
+              <p className={`text-xs sm:text-sm mb-5 md:mb-8 ${plan.highlight ? 'text-sage-400' : 'text-sage-500'}`}>
                 {plan.frequency} · {plan.visits}
               </p>
 
               {/* Divider */}
-              <div className={`h-px mb-8 ${plan.highlight ? 'bg-sage-700' : 'bg-sage-100'}`} />
+              <div className={`h-px mb-5 md:mb-8 ${plan.highlight ? 'bg-sage-700' : 'bg-sage-100'}`} />
 
               {/* Features */}
-              <ul className="space-y-3 mb-10 flex-1">
+              <ul className="space-y-2.5 md:space-y-3 mb-6 md:mb-10 flex-1">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 ${
+                  <li key={feature} className="flex items-start gap-2 md:gap-3">
+                    <div className={`flex-shrink-0 w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center mt-0.5 ${
                       plan.highlight ? 'bg-sage-500' : 'bg-sage-100'
                     }`}>
                       <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
@@ -160,7 +160,7 @@ export default function Pricing() {
                         />
                       </svg>
                     </div>
-                    <span className={`text-sm leading-relaxed ${
+                    <span className={`text-xs sm:text-sm leading-relaxed ${
                       plan.highlight ? 'text-sage-200' : 'text-sage-700'
                     }`}>
                       {feature}
@@ -172,13 +172,14 @@ export default function Pricing() {
               {/* CTA */}
               <a
                 href="#contact"
-                className={`w-full text-center py-3.5 px-6 rounded-full font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 ${
+                className={`w-full text-center py-3 md:py-3.5 px-3 md:px-6 rounded-full font-semibold text-xs sm:text-sm transition-all duration-300 hover:-translate-y-0.5 ${
                   plan.highlight
                     ? 'bg-white text-sage-900 hover:bg-sage-50 shadow-lg'
                     : 'bg-sage-500 hover:bg-sage-600 text-white shadow-md hover:shadow-lg hover:shadow-sage-200'
                 }`}
               >
-                {plan.cta}
+                <span className="hidden md:inline">{plan.cta}</span>
+                <span className="md:hidden">{plan.highlight ? plan.cta : 'Vælg'}</span>
               </a>
             </motion.div>
           ))}

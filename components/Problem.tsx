@@ -84,21 +84,21 @@ export default function Problem() {
         </motion.div>
 
         {/* Concern cards */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5 md:gap-6">
           {concerns.map((concern, index) => (
             <motion.div
               key={concern.headline}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
-              className="group relative bg-white border border-sage-100 rounded-3xl p-6 md:p-8 hover:shadow-xl hover:shadow-sage-100/50 transition-all duration-400 hover:-translate-y-1"
+              className="group relative bg-white border border-sage-100 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 hover:shadow-xl hover:shadow-sage-100/50 transition-all duration-400 hover:-translate-y-1"
             >
               {/* Icon */}
-              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl border ${concern.color} mb-5`}>
+              <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl border ${concern.color} mb-3 sm:mb-4 md:mb-5`}>
                 {concern.icon}
               </div>
-              <h3 className="text-xl font-bold text-sage-900 mb-3">{concern.headline}</h3>
-              <p className="text-sage-700 leading-relaxed">{concern.text}</p>
+              <h3 className="text-sm sm:text-lg md:text-xl font-bold text-sage-900 mb-2 sm:mb-3 leading-snug">{concern.headline}</h3>
+              <p className="text-xs sm:text-sm md:text-base text-sage-700 leading-relaxed">{concern.text}</p>
 
               {/* Hover accent */}
               <div className="absolute bottom-0 left-8 right-8 h-0.5 bg-gradient-to-r from-sage-200 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

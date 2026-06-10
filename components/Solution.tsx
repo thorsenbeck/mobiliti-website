@@ -81,20 +81,20 @@ export default function Solution() {
         </motion.div>
 
         {/* Benefits grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 md:gap-6">
           {benefits.map((benefit, index) => (
             <motion.div
               key={benefit.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.08 * index }}
-              className="group bg-white rounded-3xl p-5 md:p-7 border border-sage-100 hover:border-sage-300 hover:shadow-lg hover:shadow-sage-100/60 transition-all duration-300 hover:-translate-y-1"
+              className="group bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-7 border border-sage-100 hover:border-sage-300 hover:shadow-lg hover:shadow-sage-100/60 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-12 h-12 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center mb-5 group-hover:bg-sage-500 group-hover:text-white transition-all duration-300">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl sm:rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center mb-3 sm:mb-4 md:mb-5 group-hover:bg-sage-500 group-hover:text-white transition-all duration-300">
                 {benefit.icon}
               </div>
-              <h3 className="text-lg font-bold text-sage-900 mb-3">{benefit.title}</h3>
-              <p className="text-sage-700 leading-relaxed text-sm">{benefit.description}</p>
+              <h3 className="text-sm sm:text-base md:text-lg font-bold text-sage-900 mb-2 md:mb-3 leading-snug">{benefit.title}</h3>
+              <p className="text-xs sm:text-sm text-sage-700 leading-relaxed">{benefit.description}</p>
             </motion.div>
           ))}
         </div>

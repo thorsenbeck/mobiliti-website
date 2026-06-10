@@ -101,7 +101,7 @@ export default function About() {
           >
             Vores kerneværdier
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
             {values.map((val, index) => (
               <motion.div
                 key={val.label}
@@ -110,9 +110,9 @@ export default function About() {
                 transition={{ duration: 0.5, delay: 0.5 + 0.1 * index }}
                 className="text-center"
               >
-                <div className="text-3xl mb-3">{val.icon}</div>
-                <p className="text-white font-bold text-base mb-2">{val.label}</p>
-                <p className="text-sage-300 text-sm leading-relaxed">{val.text}</p>
+                <div className="text-2xl sm:text-3xl mb-2 md:mb-3">{val.icon}</div>
+                <p className="text-white font-bold text-sm sm:text-base mb-1.5 md:mb-2">{val.label}</p>
+                <p className="text-sage-300 text-xs sm:text-sm leading-relaxed">{val.text}</p>
               </motion.div>
             ))}
           </div>
