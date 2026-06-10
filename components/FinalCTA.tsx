@@ -41,7 +41,7 @@ export default function FinalCTA() {
   }
 
   return (
-    <section id="contact" ref={ref} className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-sage-800 via-sage-700 to-sage-900">
+    <section id="contact" ref={ref} className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-sage-800 via-sage-700 to-sage-900">
       {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
@@ -70,8 +70,8 @@ export default function FinalCTA() {
         </svg>
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left: Message */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -84,14 +84,14 @@ export default function FinalCTA() {
             </div>
 
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 md:mb-6 leading-tight"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Tag det første skridt —{' '}
               <em className="text-sage-300 not-italic">i dag</em>
             </h2>
 
-            <p className="text-sage-200 text-lg leading-relaxed mb-10">
+            <p className="text-sage-200 text-base md:text-lg leading-relaxed mb-8 md:mb-10">
               Skriv til os — vi vender tilbage inden for 24 timer. Ingen forpligtelse.
             </p>
 
@@ -124,7 +124,7 @@ export default function FinalCTA() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="bg-white rounded-4xl p-8 md:p-10 shadow-2xl">
+            <div className="bg-white rounded-3xl md:rounded-4xl p-6 sm:p-8 md:p-10 shadow-2xl">
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}

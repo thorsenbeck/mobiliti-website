@@ -34,7 +34,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 py-2.5 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center group">
@@ -43,7 +43,7 @@ export default function Navbar() {
               alt="Mobiliti"
               width={320}
               height={110}
-              className="h-24 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto transition-transform duration-300 group-hover:scale-105"
               priority
             />
           </a>

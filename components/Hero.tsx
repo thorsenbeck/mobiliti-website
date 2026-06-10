@@ -33,7 +33,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-[5fr_6fr] gap-16 items-center">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6 py-12 md:py-24 grid lg:grid-cols-[5fr_6fr] gap-10 lg:gap-16 items-center">
         {/* Left: Text Content */}
         <div className="text-center lg:text-left">
           {/* Logo */}
@@ -48,7 +48,7 @@ export default function Hero() {
               alt="Mobiliti"
               width={680}
               height={240}
-              className="h-44 md:h-56 w-auto"
+              className="h-28 sm:h-36 md:h-48 lg:h-56 w-auto"
               priority
             />
           </motion.div>
@@ -69,7 +69,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-sage-900 leading-tight mb-6 text-balance"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-sage-900 leading-tight mb-5 md:mb-6 text-balance"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
             Genoptræning og forebyggelse —{' '}
@@ -89,7 +89,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl text-sage-700 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0"
+            className="text-base md:text-lg lg:text-xl text-sage-700 leading-relaxed mb-8 md:mb-10 max-w-xl mx-auto lg:mx-0"
           >
             Genoptræning efter operation. Forebyggende træning. Eller bare en stærkere,
             tryggere hverdag — vi kommer hjem til dig.
@@ -104,7 +104,7 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 bg-sage-500 hover:bg-sage-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:shadow-xl hover:shadow-sage-200 hover:-translate-y-1"
+              className="group inline-flex items-center justify-center gap-2 bg-sage-500 hover:bg-sage-600 text-white font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-xl hover:shadow-sage-200 hover:-translate-y-1"
             >
               Book gratis konsultation
               <svg
@@ -116,7 +116,7 @@ export default function Hero() {
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center gap-2 bg-white/80 hover:bg-white text-sage-700 font-semibold px-8 py-4 rounded-full text-lg border border-sage-200 transition-all duration-300 hover:shadow-md"
+              className="inline-flex items-center justify-center gap-2 bg-white/80 hover:bg-white text-sage-700 font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-base sm:text-lg border border-sage-200 transition-all duration-300 hover:shadow-md"
             >
               Se hvordan det virker
             </a>
@@ -127,7 +127,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-wrap gap-6 justify-center lg:justify-start mt-12"
+            className="flex flex-wrap gap-x-5 gap-y-3 justify-center lg:justify-start mt-10 md:mt-12"
           >
             {[
               { icon: '🏠', label: 'Hjemme hos dig' },
@@ -147,12 +147,12 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.92, x: 30 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative hidden lg:flex items-center justify-center"
+          className="relative flex items-center justify-center mt-4 lg:mt-0"
         >
-          <div className="relative w-full max-w-[680px]">
-            {/* Decorative outer shapes (background) */}
-            <div className="absolute -inset-8 bg-sage-200/40 blob-1" />
-            <div className="absolute -inset-5 bg-cream-200/50 blob-2" />
+          <div className="relative w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[680px] mx-auto">
+            {/* Decorative outer shapes (background) — hidden on small screens to keep things clean */}
+            <div className="hidden md:block absolute -inset-8 bg-sage-200/40 blob-1" />
+            <div className="hidden md:block absolute -inset-5 bg-cream-200/50 blob-2" />
 
             {/* Main image — organic oval/blob shape, full quality */}
             <div className="relative blob-1 overflow-hidden shadow-2xl shadow-sage-300/40 aspect-[6/5] bg-sage-100">
@@ -160,18 +160,18 @@ export default function Hero() {
                 src="/hero-training.png"
                 alt="Fysioterapeut træner ældre kvinde med elastik i hjemmet"
                 fill
-                sizes="(max-width: 1024px) 0px, 680px"
+                sizes="(max-width: 640px) 340px, (max-width: 1024px) 440px, 680px"
                 className="object-cover object-center"
                 unoptimized
                 priority
               />
             </div>
 
-            {/* Floating cards over image */}
+            {/* Floating cards over image — desktop only to keep mobile clean */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-4 -left-6 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-sage-100"
+              className="hidden lg:flex absolute -top-4 -left-6 bg-white rounded-2xl shadow-lg p-3 items-center gap-2 border border-sage-100"
             >
               <div className="w-8 h-8 rounded-full bg-sage-100 flex items-center justify-center text-sm">💪</div>
               <div>
@@ -183,7 +183,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-sage-100"
+              className="hidden lg:flex absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg p-3 items-center gap-2 border border-sage-100"
             >
               <div className="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center text-sm">🛡️</div>
               <div>
@@ -195,7 +195,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-              className="absolute top-1/2 -translate-y-1/2 -right-12 bg-white rounded-2xl shadow-lg p-3 flex items-center gap-2 border border-sage-100"
+              className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-12 bg-white rounded-2xl shadow-lg p-3 items-center gap-2 border border-sage-100"
             >
               <div className="w-8 h-8 rounded-full bg-earth-100 flex items-center justify-center text-sm">❤️</div>
               <div>

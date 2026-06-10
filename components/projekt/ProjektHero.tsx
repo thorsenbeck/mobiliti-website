@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function ProjektHero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-to-br from-cream-100 via-cream-50 to-sage-50 pt-32 pb-20">
+    <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden bg-gradient-to-br from-cream-100 via-cream-50 to-sage-50 pt-28 md:pt-32 pb-12 md:pb-20">
       {/* Background organic shapes */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
@@ -26,7 +26,7 @@ export default function ProjektHero() {
         />
       </div>
 
-      <div className="relative max-w-4xl mx-auto px-6 text-center">
+      <div className="relative max-w-4xl mx-auto px-5 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function ProjektHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-sage-900 leading-tight mb-6 text-balance"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-sage-900 leading-tight mb-5 md:mb-6 text-balance"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
           Forebyggende hjemmetræning —{' '}
@@ -52,7 +52,7 @@ export default function ProjektHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-lg md:text-xl text-sage-700 leading-relaxed mb-10 max-w-2xl mx-auto"
+          className="text-base md:text-lg lg:text-xl text-sage-700 leading-relaxed mb-8 md:mb-10 max-w-2xl mx-auto"
         >
           Mobiliti afprøver en ny model for fagligt funderet hjemmetræning til ældre,
           rekonvalescenter og privatpersoner — leveret af fysioterapeutstuderende under

@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="absolute top-0 left-0 w-48 h-48 blob-2 bg-sage-800/40 -translate-x-1/4 -translate-y-1/4" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6 pt-16 pb-8">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6 pt-12 md:pt-16 pb-8">
         {/* Main footer content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
           {/* Brand column */}

@@ -33,34 +33,34 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="about" ref={ref} className="relative py-24 md:py-32 bg-cream-50 overflow-hidden">
+    <section id="about" ref={ref} className="relative py-16 md:py-24 lg:py-32 bg-cream-50 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 blob-1 bg-sage-100/50 translate-x-1/3 -translate-y-1/4" />
         <div className="absolute bottom-0 left-0 w-80 h-80 blob-2 bg-cream-200/80 -translate-x-1/4 translate-y-1/4" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6">
 
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-sage-100 text-sage-700 text-sm font-semibold px-4 py-2 rounded-full mb-6 border border-sage-200">
             <span className="w-2 h-2 rounded-full bg-sage-500" />
             Om Mobiliti
           </div>
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-sage-900 mb-5 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-sage-900 mb-5 leading-tight"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
             Bevægelse er ikke en luksus —{' '}
             <em className="text-sage-500 not-italic">det er en rettighed</em>
           </h2>
-          <p className="text-lg text-sage-700 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-sage-700 max-w-2xl mx-auto leading-relaxed">
             Mobiliti er grundlagt af en fysioterapeut med én overbevisning: alle fortjener
             tryg, faglig træning — hjemme hos sig selv.
           </p>
@@ -74,7 +74,7 @@ export default function About() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="bg-white rounded-3xl p-8 border border-sage-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-white rounded-3xl p-6 md:p-8 border border-sage-100 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <div className="text-3xl mb-4">{pillar.icon}</div>
               <h3
@@ -93,10 +93,10 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="bg-sage-900 rounded-4xl p-10 md:p-14"
+          className="bg-sage-900 rounded-4xl p-8 md:p-14"
         >
           <h3
-            className="text-2xl md:text-3xl font-bold text-white mb-10 text-center"
+            className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-8 md:mb-10 text-center"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
             Vores kerneværdier

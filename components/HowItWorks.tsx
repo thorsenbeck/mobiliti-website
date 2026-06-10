@@ -41,32 +41,32 @@ export default function HowItWorks() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="how-it-works" ref={ref} className="relative py-24 md:py-32 bg-white overflow-hidden">
+    <section id="how-it-works" ref={ref} className="relative py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 right-8 w-64 h-64 blob-2 bg-cream-100/70" />
         <div className="absolute bottom-20 left-0 w-48 h-48 blob-3 bg-sage-50/80" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-12 md:mb-20"
         >
           <div className="inline-flex items-center gap-2 bg-earth-50 text-earth-600 text-sm font-semibold px-4 py-2 rounded-full mb-6 border border-earth-200">
             <span className="w-2 h-2 rounded-full bg-earth-400" />
             Simpelt og trygt
           </div>
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-sage-900 mb-6 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-sage-900 mb-5 md:mb-6 leading-tight"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
             Tre enkle trin til et bedre liv
           </h2>
-          <p className="text-lg text-sage-700 leading-relaxed">
+          <p className="text-base md:text-lg text-sage-700 leading-relaxed">
             Sådan kommer du i gang — nemt og uden forpligtelser.
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ export default function HowItWorks() {
                 </div>
               )}
 
-              <div className={`relative ${step.bgLight} rounded-4xl p-8 border ${step.borderColor} h-full group hover:shadow-xl transition-all duration-400 hover:-translate-y-1`}>
+              <div className={`relative ${step.bgLight} rounded-4xl p-6 md:p-8 border ${step.borderColor} h-full group hover:shadow-xl transition-all duration-400 hover:-translate-y-1`}>
                 {/* Step number */}
                 <div className="flex items-start justify-between mb-6">
                   <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} text-white font-bold text-lg shadow-lg`}>

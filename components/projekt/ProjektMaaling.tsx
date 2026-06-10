@@ -17,8 +17,8 @@ export default function ProjektMaaling() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-white to-cream-50 overflow-hidden">
-      <div className="relative max-w-6xl mx-auto px-6">
+    <section ref={ref} className="relative py-16 md:py-24 lg:py-32 bg-gradient-to-b from-white to-cream-50 overflow-hidden">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -30,7 +30,7 @@ export default function ProjektMaaling() {
             Dokumentation og effektmåling
           </div>
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-sage-900 mb-6 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-sage-900 mb-6 leading-tight"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
             Validerede måleredskaber{' '}
